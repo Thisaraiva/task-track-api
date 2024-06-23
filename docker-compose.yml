@@ -8,12 +8,19 @@ services:
       dockerfile: Dockerfile
     environment:
       - PORT=3000
+      - DATABASE_HOST=task_db
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=postgres
+      - DATABASE_NAME=task_db
     ports:
       - '3000:3000'
       - '9229:9229'
+      - '5432:5432'
     volumes:
       - .:/app
       - ./node_modules:/app/node_modules
+            
     networks:
       - task-track-database_development
 
