@@ -33,7 +33,7 @@ export class TaskController {
     return this.taskService.findOne(id);
   }
 
-  @Post('create')
+  @Post()
   create(@Body() createTaskDto: CreateTaskDto) {
     return this.taskService.create(createTaskDto);
   }

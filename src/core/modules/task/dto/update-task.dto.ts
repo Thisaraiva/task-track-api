@@ -23,7 +23,6 @@ export class UpdateTaskDto extends PartialType(CreateTaskDto) {
     description: 'The due date of the task',
   })
   @IsNotEmpty()
-  @IsDate()
   dueDate: Date;
 
   @ApiProperty({

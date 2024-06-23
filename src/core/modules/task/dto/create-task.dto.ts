@@ -15,7 +15,6 @@ export class CreateTaskDto {
     description: 'The due date of the task',
   })
   @IsNotEmpty()
-  @IsDate()
   dueDate: Date;
 
   @ApiProperty({
