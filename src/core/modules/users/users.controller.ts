@@ -1,3 +1,4 @@
+// src/core/modules/users/users.controller.ts
 import {
   Controller,
   Post,
@@ -28,7 +29,7 @@ export class UsersController {
     return this.usersService.findOne(id);
   }
 
-  @Get(':email')
+  @Get('/email/:email')
   findUserByEmail(@Param('email') email: string) {
     return this.usersService.findUserByEmail(email);
   }
